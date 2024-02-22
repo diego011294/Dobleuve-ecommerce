@@ -9,6 +9,21 @@
     height: 180px;
 }
 
+.bi-heart{
+    background-color: white;
+    text-align: center;
+    height: min-content;
+    width: 25px;
+}
+
+.product-card img{
+    transition: transform 0.4s ease-in-out;
+}
+
+.product-card img:hover{
+    transform: scale(1.05);
+}
+
 
 @media (max-width: 1400px) {
     .card-body p{

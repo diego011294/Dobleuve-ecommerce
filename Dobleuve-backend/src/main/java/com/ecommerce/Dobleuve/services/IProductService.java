@@ -8,4 +8,5 @@ public interface IProductService {
 
     List<Product> listarProductos();
     List<Product> buscarProductosPorNombre(String nombre);
+    Product obtenerProductoPorId(Long id);
 }

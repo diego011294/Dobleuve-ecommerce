@@ -24,4 +24,10 @@ public class ProductService implements IProductService {
         return productRepo.findByNombreContainingIgnoreCase(nombre);
     }
 
+    @Override
+    public Product obtenerProductoPorId(Long id) {
+        return productRepo.findById(id).orElse(null);
+    }
+
+
 }
