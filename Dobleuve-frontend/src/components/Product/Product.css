@@ -1,0 +1,24 @@
+.product-card{
+    background-image: url(/public/img/FondoProduct.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 40px;
+}
+
+.card-body p{
+    height: 180px;
+}
+
+
+@media (max-width: 1400px) {
+    .card-body p{
+        height: 290px;
+    }
+}
+
+@media (max-width: 980px) {
+    .card-body p{
+        height: 130px;
+        margin-bottom: 50px;
+    }
+}
