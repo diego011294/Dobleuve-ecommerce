@@ -2,6 +2,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
     return (
+        <div>
         <nav className="navbar navbar-expand-md">
             <div className="iconos">
                     <a href="#" className="btn bg-white text-dark mx-3 shadow-sm">Login</a>
@@ -26,6 +27,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+    </div>
     )
 }
 

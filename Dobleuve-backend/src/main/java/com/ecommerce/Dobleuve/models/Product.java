@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -28,16 +29,21 @@ public class Product {
     @Column(nullable = true)
     private String imageUrl;
 
+    @ManyToOne
+    private ShoppingCart cart;
+
     public Product() {
     }
 
-    public Product(Long id, String nombre, String descripcion, double precio, int cantidadDisponible, String imageUrl) {
+    public Product(Long id, String nombre, String descripcion, double precio, int cantidadDisponible, String imageUrl,
+            ShoppingCart cart) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.cantidadDisponible = cantidadDisponible;
         this.imageUrl = imageUrl;
+        this.cart = cart;
     }
 
     public Long getId() {
@@ -88,9 +94,17 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
+    public ShoppingCart getCart() {
+        return cart;
+    }
+
+    public void setCart(ShoppingCart cart) {
+        this.cart = cart;
+    }
+
     @Override
     public String toString() {
         return "Product [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", precio=" + precio
-                + ", cantidadDisponible=" + cantidadDisponible + ", imageUrl=" + imageUrl + "]";
+                + ", cantidadDisponible=" + cantidadDisponible + ", imageUrl=" + imageUrl + ", cart=" + cart + "]";
     }
 }

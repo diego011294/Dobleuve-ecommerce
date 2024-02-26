@@ -9,7 +9,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -20,19 +19,15 @@ public class ShoppingCart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    private User user;
-
-    @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CartItem> items = new ArrayList<>();
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Product> products = new ArrayList<>();
 
     public ShoppingCart() {
     }
 
-    public ShoppingCart(Long id, User user, List<CartItem> items) {
+    public ShoppingCart(Long id, List<Product> products) {
         this.id = id;
-        this.user = user;
-        this.items = items;
+        this.products = products;
     }
 
     public Long getId() {
@@ -43,24 +38,16 @@ public class ShoppingCart {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public List<CartItem> getItems() {
-        return items;
-    }
-
-    public void setItems(List<CartItem> items) {
-        this.items = items;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     @Override
     public String toString() {
-        return "ShoppingCart [id=" + id + ", user=" + user + ", items=" + items + "]";
+        return "ShoppingCart [id=" + id + ", products=" + products + "]";
     }
 }
