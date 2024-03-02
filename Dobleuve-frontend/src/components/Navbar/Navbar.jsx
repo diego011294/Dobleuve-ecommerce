@@ -1,12 +1,22 @@
 import "./Navbar.css";
+import { useCart } from '../../CartContext';
+import Modal from 'react-bootstrap/Modal';
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 
 const Navbar = () => {
+    const { cartItems, removeFromCart, showCartModal, setShowCartModal } = useCart();
+
+    const handleOpenCartModal = () => setShowCartModal(true);
+
     return (
         <div>
-        <nav className="navbar navbar-expand-md">
+                <nav className="navbar navbar-expand-md">
             <div className="iconos">
                     <a href="#" className="btn bg-white text-dark mx-3 shadow-sm">Login</a>
-                    <a href="#"><i class="bi bi-bag"></i></a>
+                    <button className="bolsa-compra"  onClick={() => setShowCartModal(true)}>
+                        <i className="bi bi-bag"></i>
+                        {cartItems.length > 0 && <span className="badge bg-danger rounded-circle">{cartItems.length}</span>}
+                    </button>
                 </div>
             <div className="nav-movil container-fluid d-flex flex-column">
                 <a className="navbar-brand" href="#"><img src="/public/img/Logo VV.SVG" alt="Logo" /></a>
@@ -26,9 +36,17 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
-    )
+            </nav>
+            <Modal show={showCartModal} onHide={() => setShowCartModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Carrito de Compras</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />
+                </Modal.Body>
+            </Modal>
+        </div>
+    );
 }
 
-export default Navbar
+export default Navbar;

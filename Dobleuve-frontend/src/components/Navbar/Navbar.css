@@ -6,6 +6,12 @@ nav {
     height: 600px;
 }
 
+.bolsa-compra{
+    background: none;
+    color: white;
+    border: none;
+}
+
 nav img {
     width: 300px;
 }

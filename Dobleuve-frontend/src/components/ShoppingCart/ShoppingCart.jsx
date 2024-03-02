@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import './ShoppingCart.css';
 
 const ShoppingCart = ({ cartItems, removeFromCart }) => {
+    if (!cartItems || cartItems.length === 0) {
+        return <div className='text-center'>No tienes ningún pendiente en el carrito 😞</div>;
+    }
     return (
         <div className="shopping-cart">
-            <h2>Carrito de Compras</h2>
-            <ul>
+            <ul className='list-unstyled'>
                 {cartItems.map((product) => (
                     <li key={product.id}>
                         <div>
-                            <h3>{product.nombre}</h3>
-                            <p>Precio: {product.precio}</p>
-                            <button onClick={() => removeFromCart(product.id)}>Eliminar</button>
+                            <h4>{product.nombre}</h4>
+                            <p>Precio: {product.precio}€</p>
+                            <button className='btn btn-danger shadow-sm' onClick={() => removeFromCart(product.id)}><i class="bi bi-trash-fill"></i></button>
                         </div>
                     </li>
                 ))}

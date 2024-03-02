@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.store{
+    padding: 55px
+}
+
 .store h1{
     font-family: "Roboto Condensed", sans-serif;
     font-size: 60px;
@@ -14,7 +18,7 @@
     font-size: 80px;
 }
 
-.store h3{
+.store h3, h5{
     font-weight: lighter;
 }
 
