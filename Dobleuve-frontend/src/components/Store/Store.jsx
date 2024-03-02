@@ -62,32 +62,34 @@ const Store = () => {
     return (
         <div className="container">
             <div className="d-flex flex-column align-items-center">
-            <div className="text-center store">
-                <h1>¡Elige tu estilo!</h1>
-                <h3>Nuevos modelos disponibles, hechos totalmente a mano.</h3>
-                <h5>Tambien puedes personalizarlos a tu gusto.</h5>
-            </div>
-            <div className="input-group mt-3" style={{ maxWidth: '500px' }}>
-                <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Filtra tu busqueda..."
-                    aria-label="Example text with button addon"
-                    aria-describedby="button-addon1"
-                    onChange={(e) => handleSearch(e.target.value)}
-                />
-                <button className="btn btn-dark" type="button" id="button-addon1">
-                    Buscar
-                </button>
-            </div>
+                <div className="text-center store">
+                    <h1>¡Elige tu estilo!</h1>
+                    <h3>Nuevos modelos disponibles, hechos totalmente a mano.</h3>
+                    <h5>Tambien puedes personalizarlos a tu gusto.</h5>
+                </div>
+                <div className="input-group mt-3" style={{ maxWidth: '500px' }}>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Filtra tu busqueda..."
+                        aria-label="Example text with button addon"
+                        aria-describedby="button-addon1"
+                        onChange={(e) => handleSearch(e.target.value)}
+                    />
+                    <button className="btn btn-dark" type="button" id="button-addon1">
+                        Buscar
+                    </button>
+                </div>
             </div>
             {/* Renderiza los productos */}
-            <div className="row lista-products">
-                {filteredProducts.map((product) => (
-                    <div key={product.id} className="col-lg-4 mb-4">
-                        <Product product={product} addToCart={handleAddToCart} />
-                    </div>
-                ))}
+            <div className="container">
+                <div className="row lista-products">
+                    {filteredProducts.map((product) => (
+                        <div key={product.id} className="col-lg-4 mb-4">
+                            <Product product={product} addToCart={handleAddToCart} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

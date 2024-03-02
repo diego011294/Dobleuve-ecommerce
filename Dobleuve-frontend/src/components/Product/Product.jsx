@@ -30,7 +30,7 @@ const Product = ({ product, addToCart }) => {
         <div className="container h-100 p-5 product-card">
             <div>
                 <Link to={`/product/${product.id}`}>
-                    <img src={product.imageUrl} className="card-img-top p-3" alt="pendiente" />
+                    <img src={product.imageUrl} style={{ maxWidth: '470px' }} className="card-img-top p-3" alt="pendiente" />
                 </Link>
                 <div className="card-body mt-4 p-3">
                     <div className="d-flex justify-content-between">

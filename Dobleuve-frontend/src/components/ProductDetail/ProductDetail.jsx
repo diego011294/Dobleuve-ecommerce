@@ -104,9 +104,8 @@ const ProductDetail = ({ match }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="buttons d-flex justify-content-evenly mt-4">
-                            <button className="btn btn-dark">Comprar &nbsp; <i className="bi bi-basket2-fill"></i></button>
-                            <button className="btn btn-danger">¡Lo quiero! &nbsp; <i className="bi bi-heart-fill"></i></button>
+                        <div className="buttons text-center mt-5">
+                            <button className="btn btn-danger">Añadir a la lista de deseos &nbsp; <i className="bi bi-heart-fill"></i></button>
                         </div>
                     </div>
                 </div>
