@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { useCart } from '../../CartContext';
 import Modal from 'react-bootstrap/Modal';
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Navbar = () => {
     const { cartItems, removeFromCart, showCartModal, setShowCartModal } = useCart();
@@ -15,7 +16,7 @@ const Navbar = () => {
                     <a href="#" className="btn bg-white text-dark mx-3 shadow-sm">Login</a>
                     <button className="bolsa-compra"  onClick={() => setShowCartModal(true)}>
                         <i className="bi bi-bag"></i>
-                        {cartItems.length > 0 && <span className="badge bg-danger rounded-circle">{cartItems.length}</span>}
+                        {cartItems.length > 0 && <span className="badge bg-dark rounded-circle ms-1">{cartItems.length}</span>}
                     </button>
                 </div>
             <div className="nav-movil container-fluid d-flex flex-column">
@@ -31,7 +32,9 @@ const Navbar = () => {
                         <a className="nav-link active text-white mx-3" aria-current="page" href="#">INICIO</a>
                         <a className="nav-link text-white mx-3" href="#">SOBRE NOSOTROS</a>
                         <a className="nav-link text-white mx-3 disabled" href="#">GALERÍA</a>
+                        <Link to={"/store"}>
                         <a className="nav-link text-white mx-3" href="#">TIENDA</a>
+                        </Link>
                         <a className="nav-link text-white mx-3" href="#">CONTACTO</a>
                     </div>
                 </div>

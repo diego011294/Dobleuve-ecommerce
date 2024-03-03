@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.imagen1 {
+    background-image: url(/public/img/imagen1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.imagen1 h1, h4{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.imagenP{
+    background-color: #e2d6bc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+.imagen2{
+    background-image: url(/public/img/imagen2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding: 150px;
+}
+
+.imagen3 {
+    background-image: url(/public/img/imagen3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding: 150px;
+}
+
+.imagen4 {
+    background-image: url(/public/img/imagen4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.imagen5 {
+    background-image: url(/public/img/imagen5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding: 150px;
+}
+
+.imagen6 {
+    background-image: url(/public/img/imagen6.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding: 150px;
+}
+
+
+@media (max-width: 768px) {
+    .imagenP img{
+        max-width: 300px;
+    }
+    .imagenP{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+    }
+}

@@ -21,7 +21,7 @@ const ShoppingCart = ({ cartItems, removeFromCart }) => {
                 {cartItems.map((product) => (
                     <li key={product.id} className='p-3 border-bottom border-black '>
                         <div className=' d-flex justify-content-between gap-3'>
-                            <img src={product.imageUrl} style={{ maxWidth: '70px' }} alt={product.name} />
+                            <img src={product.imageUrl} style={{ maxWidth: '90px' }} alt={product.name} />
                             <div className='d-flex flex-column'>
                                 <h4>{product.nombre}</h4>
                                 <div className='d-flex gap-2'>
