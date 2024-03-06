@@ -1,11 +1,14 @@
 import "./Product.css";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
 import React, { useState, useEffect } from 'react';
+import { useAuth } from "../../AuthContext";
+
 
 
 const Product = ({ product, addToCart }) => {
     const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+    const { user } = useAuth() 
 
     useEffect(() => {
         if (showConfirmationModal) {
@@ -40,7 +43,11 @@ const Product = ({ product, addToCart }) => {
                     <p className="card-text">{product.descripcion}</p>
                     <div className="d-flex justify-content-between align-items-center mt-3">
                         <h5 className="card-text">{product.precio}€</h5>
+                        {user ? (
                         <button onClick={() => handleAddToCart(product)} className="btn btn-dark">Comprar &nbsp; <i className="bi bi-basket2-fill"></i></button>
+                        ) : (
+                            <a href="/login" className="btn btn-dark">Comprar &nbsp; <i className="bi bi-basket2-fill"></i></a>
+                        )}
                     </div>
                 </div>
             </div>

@@ -1,29 +1,28 @@
-import { useState, useEffect, imageRef, useRef } from "react"
-import { Link } from "react-router-dom"
-import "./ProductDetail.css"
+import { useState, useEffect, useRef } from "react";
+import { Link, useParams } from "react-router-dom";
+import "./ProductDetail.css";
 
-
-const ProductDetail = ({ match }) => {
-    const [product, setProduct] = useState(null)
-    const [loading, setLoading] = useState(true)
+const ProductDetail = () => {
+    const { id } = useParams(); // Obtener el parámetro de la URL
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
     const imageRef = useRef(null);
 
     useEffect(() => {
         const fetchProductDetail = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/products/${match.params.id}`)
-                const data = await response.json()
-                setProduct(data)
+                const response = await fetch(`http://localhost:8080/api/products/${id}`);
+                const data = await response.json();
+                setProduct(data);
             } catch (error) {
                 console.error('Error fetching product detail:', error);
             } finally {
-                setLoading(false)
+                setLoading(false);
             }
         }
 
         fetchProductDetail();
-
-    }, [match.params.id]);
+    }, [id]); // Usar id en la dependencia del efecto
 
     useEffect(() => {
         // Verifica que la referencia exista y la imagen haya sido renderizada
@@ -36,17 +35,16 @@ const ProductDetail = ({ match }) => {
     }, [imageRef.current, loading]);
 
     if (loading) {
-        return <div>Loading...</div>
+        return <div>Loading...</div>;
     }
 
     if (!product) {
-        return <div>Error: No se pudo cargar el producto</div>
+        return <div>Error: No se pudo cargar el producto</div>;
     }
-
 
     return (
         <div className="container p-5 mt-5 detail-card" ref={imageRef}>
-            <Link to="/" className="btn btn-dark mb-3"><i class="bi bi-arrow-left-short"></i> Volver a la tienda</Link>
+            <Link to="/store" className="btn btn-dark mb-3"><i class="bi bi-arrow-left-short"></i> Volver a la tienda</Link>
             <div class=" mb-3 p-4">
                 <div class="row">
                     <div class="col-md-4">

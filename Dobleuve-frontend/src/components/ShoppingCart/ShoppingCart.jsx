@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ShoppingCart.css';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom';
 
 const ShoppingCart = ({ cartItems, removeFromCart }) => {
     //Función para calcular el precio total de los productos.
@@ -49,7 +49,7 @@ const ShoppingCart = ({ cartItems, removeFromCart }) => {
                 <button className='mt-4 btn btn-dark w-100'>Continuar con el pago</button>
 
                 <div className='border-top border-dark mt-4 p-3'>
-                    <h4 className='text-center mb-3'>¿Tienes un cupon de descuento?</h4>
+                    <h4 className='text-center mb-3'>¿Tienes un cupón de descuento?</h4>
                     <div className="input-group mb-3">
                         <input type="text" className="form-control" placeholder="Escribe tu codigo..." aria-label="Example text with button addon" aria-describedby="button-addon1" />
                         <button className="btn btn-outline-dark w-25" type="button" id="button-addon1">Enviar</button>

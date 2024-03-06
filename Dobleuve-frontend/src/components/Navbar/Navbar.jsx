@@ -2,10 +2,11 @@ import "./Navbar.css";
 import { useCart } from '../../CartContext';
 import Modal from 'react-bootstrap/Modal';
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const { cartItems, removeFromCart, showCartModal, setShowCartModal } = useCart();
+    const location = useLocation();
 
     const handleOpenCartModal = () => setShowCartModal(true);
 
@@ -29,12 +30,10 @@ const Navbar = () => {
                     </label>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-link active text-white mx-3" aria-current="page" href="#">INICIO</a>
+                        <a className={`nav-link text-white mx-3 ${location.pathname === '/' ? 'active' : ''}`} href={"/"}>INICIO</a>
                         <a className="nav-link text-white mx-3" href="#">SOBRE NOSOTROS</a>
                         <a className="nav-link text-white mx-3 disabled" href="#">GALERÍA</a>
-                        <Link to={"/store"}>
-                        <a className="nav-link text-white mx-3" href="#">TIENDA</a>
-                        </Link>
+                        <a className={`nav-link text-white mx-3 ${location.pathname === '/store' ? 'active' : ''}`} href={"/store"}>STORE</a>
                         <a className="nav-link text-white mx-3" href="#">CONTACTO</a>
                     </div>
                 </div>

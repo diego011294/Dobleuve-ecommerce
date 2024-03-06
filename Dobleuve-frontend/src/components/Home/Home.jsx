@@ -2,6 +2,8 @@ import "./Home.css"
 import React, { useState, useEffect } from 'react';
 
 
+
+
 const Home = () => {
     const [productImage1, setProductImage1] = useState('');
     const [productImage2, setProductImage2] = useState('');
@@ -58,8 +60,9 @@ const Home = () => {
                         Artesanos desde 2022.
                     </h5>
                 </div>
-                <div className="col-md-3 imagenP">
+                <div className="d-flex flex-column col-md-3 imagenP">
                     <img src={productImage1} alt="Product 1" className="img-fluid" />
+                    <a className="text-decoration-none text-dark detalle mt-2 opacity-75" href={`/product/1`}>Ver detalles &nbsp; <i class="bi bi-arrow-right"></i></a>                  
                 </div>
                 <div className="col-md-3 imagen2">
 
@@ -69,8 +72,9 @@ const Home = () => {
                 <div className="col-md-3 imagen3">
                     
                 </div>
-                <div className="col-md-3 imagenP">
+                <div className="col-md-3 d-flex flex-column imagenP">
                     <img src={productImage2} alt="Product 2" className="img-fluid" />
+                    <a className="text-decoration-none text-dark detalle mt-2 opacity-75" href={`/product/2`}>Ver detalles &nbsp; <i class="bi bi-arrow-right"></i></a>                  
                 </div>
                 <div className="col-md-6 imagen4">
 
@@ -80,11 +84,20 @@ const Home = () => {
                 <div className="col-md-4 imagen5">
                     
                 </div>
-                <div className="col-md-3 imagenP">
+                <div className="col-md-3 d-flex flex-column imagenP">
                     <img src={productImage3} alt="Product 3" className="img-fluid" />
+                    <a className="text-decoration-none text-dark detalle mt-2 opacity-75" href={`/product/4`}>Ver detalles &nbsp; <i class="bi bi-arrow-right"></i></a>                  
                 </div>
-                <div className="col-md-5 imagen6">
-
+                <div className="col-md-5 p-4 d-flex flex-column justify-content-center align-items-center imagen6">
+                <h1 className="text-center fw-bolder display-4 text-dark">
+                        NUESTRA TIENDA
+                    </h1>
+                    <h4 className="text-dark text-center">
+                    "Encuentra la belleza en cada detalle. ¡Adelante hacia la elegancia artesanal!"
+                    </h4>
+                    <a href={"/store"} className="btn shadow-lg btn-dark text-white mt-5 fw-light">
+                        Ir a la tienda  &nbsp; <i className="bi bi-basket2-fill"></i>
+                    </a>
                 </div>
             </div>
         </div>

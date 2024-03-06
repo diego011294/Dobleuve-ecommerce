@@ -67,7 +67,7 @@ const Store = () => {
                     <h3>Nuevos modelos disponibles, hechos totalmente a mano.</h3>
                     <h5>Tambien puedes personalizarlos a tu gusto.</h5>
                 </div>
-                <div className="input-group mt-3" style={{ maxWidth: '500px' }}>
+                <div className="input-group mt-1" style={{ maxWidth: '500px' }}>
                     <input
                         type="text"
                         className="form-control"

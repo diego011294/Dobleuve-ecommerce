@@ -8,7 +8,7 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
-.imagen1 h1, h4{
+.imagen1 h1{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -43,10 +43,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
+    padding: 150px;
 }
 
 .imagen5 {
-    background-image: url(/public/img/imagen5.jpg);
+    background-image: url(/public/img/imagen6.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -54,13 +55,35 @@
 }
 
 .imagen6 {
-    background-image: url(/public/img/imagen6.JPG);
+    background-image: url(/public/img/imagen5.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
-    padding: 150px;
 }
 
+.imagen6 h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.detalle{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: light;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.detalle::after{
+    content:'';
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    display: block;
+    transition: 0.2s linear;
+}
+
+.detalle:hover::after{
+    width: 100%;
+}
 
 @media (max-width: 768px) {
     .imagenP img{
