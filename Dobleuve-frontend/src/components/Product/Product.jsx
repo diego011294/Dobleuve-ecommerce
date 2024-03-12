@@ -37,11 +37,13 @@ const Product = ({ product, addToCart }) => {
                 </Link>
                 <div className="card-body mt-4 p-3">
                     <div className="d-flex justify-content-between">
-                        <h2 className="card-title mb-3">{product.nombre}</h2>
+                        <h2 className="card-title mb-3 titulo-pendiente fs-1">{product.nombre}</h2>
                         <i class="bi bi-heart rounded-circle"></i>
                     </div>
-                    <p className="card-text">{product.descripcion}</p>
-                    <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                        <p className="card-text">{product.descripcion}</p>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center mt-5 precio-compra">
                         <h5 className="card-text">{product.precio}€</h5>
                         {user ? (
                         <button onClick={() => handleAddToCart(product)} className="btn btn-dark">Comprar &nbsp; <i className="bi bi-basket2-fill"></i></button>

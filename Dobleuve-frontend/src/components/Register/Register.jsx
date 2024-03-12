@@ -40,29 +40,45 @@ const Register = () => {
     }
 
     return (
-        <div className="container">
-            <div className="col-sm-12 d-flex justify-content-center">
-                {error && <p>{error}</p>}
-                <form className="p-5"  style={{maxWidth: '500px' }} onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="email" class="form-label">Correo electrónico</label>
-                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="tuemail@ejemplo.com"
-                            onChange={handleChange}
-                        />
-                        <div id="emailHelp" class="form-text">No vamos a compartir tus datos con terceros.</div>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="password" class="form-label">Contraseña</label>
-                        <input type="password" name="password" class="form-control" id="password" placeholder="******"
-                            onChange={handleChange}
-                        />
-                        <div id="emailHelp" class="form-text">La contraseña debe de tener al menos 6 carácteres.</div>
-                    </div>
-                    <button type="submit" class="btn btn-dark">Registrarse</button>
-                </form>
+        <div className="container-fluid">
+
+        <div className="col-sm-12 d-flex flex-column justify-content-center align-items-center">
+            <div>
+                {error && <p className="mt-5 bg-danger p-3 rounded text-white"><i class="bi bi-x-circle"></i> &nbsp; {error}</p>}
             </div>
+            <div className="d-flex justify-content-center align-items-center flex-wrap">
+                <div className="register-fondo d-flex justify-content-center flex-column align-items-center gap-2">
+                    <h1 className="login-titulo">Registro</h1>
+                    <h5 className="text-center text-white">¡Registrate y obten un codigo de descuento del 10%!</h5>
+                    <p className="text-white text-center">Si ya tienes cuenta puedes acceder con tu correo o con la cuenta de Google.</p>
+                    <a className="btn bg-white shadow" style={{ maxWidth: '100px' }} href="/login">Login</a>
+                </div>
+                    
+                <div className="d-flex flex-column align-items-center justify-content-center formulario">
+                <form className="p-5 login"  style={{maxWidth: '500px' }} onSubmit={handleSubmit}>
+                            <div className="mb-3">
+                                <label htmlFor="email" class="form-label">Correo electrónico</label>
+                                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="tuemail@ejemplo.com"
+                                    onChange={handleChange}
+                                />
+                                <div id="emailHelp" class="form-text">No vamos a compartir tus datos con terceros.</div>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="password" class="form-label">Contraseña</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="******"
+                                    onChange={handleChange}
+                                />
+                                <div id="emailHelp" class="form-text">La contraseña debe de tener al menos 6 carácteres.</div>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Registrarse</button>
+                        </form>
+                </div>
+            </div>
+        </div>
         </div>
     )
 }
+
+
 
 export default Register

@@ -65,6 +65,18 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.descuento span{
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: -2px;
+    color: rgba(255, 255, 255, 0.551);
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.descuento{
+    background-color: rgb(39, 42, 35);
+}
+
 .detalle{
     font-family: "Roboto Condensed", sans-serif;
     font-weight: light;

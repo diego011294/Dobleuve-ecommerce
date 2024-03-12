@@ -18,7 +18,7 @@ const UserDetails = () => {
 
     return (
         <div>
-            <h1>Benvenido/a {user.email}</h1>
+            <h1>Benvenido/a {user.displayName || user.email}</h1>
             <button onClick={handleLogout}>
                 Logout
             </button>

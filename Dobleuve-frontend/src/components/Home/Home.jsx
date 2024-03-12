@@ -49,12 +49,19 @@ const Home = () => {
     return (
         <div className="container-fluid">
             <div className="row linea1">
+            <div className=" d-flex align-items-center justify-content-center p-0 descuento gap-3">
+                <p className="mt-3 text-white text-center fw-lighter">Obten un 10% de descuento al registrarte<span> | &nbsp; FORMA PARTE DE LA COMUNIDAD</span></p>
+                <div className="d-flex gap-3 justify-content-center align-items-center " style={{ fontSize: '15px' }}>
+                    <i class="bi bi-instagram text-white opacity-75"></i>
+                    <i class="bi bi-github text-white opacity-75"></i>
+                </div>
+            </div>
                 <div className="col-md-6 p-4 imagen1 d-flex flex-column justify-content-center align-items-center">
                     <h1 className="text-center fw-bolder display-4 text-white">
                         DOBLEUVE ARTESANÍA
                     </h1>
                     <h4 className="text-white text-center">
-                        Nos dedicamos a trabajar la arcilla polimérica realizando piezas unicas y exclusivas.
+                        Nos dedicamos a trabajar la arcilla polimérica realizando piezas únicas y exclusivas.
                     </h4>
                     <h5 className="text-white mt-5 fw-light">
                         Artesanos desde 2022.
@@ -101,6 +108,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 
