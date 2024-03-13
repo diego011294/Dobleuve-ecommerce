@@ -37,8 +37,8 @@ const Footer = () => {
                     <div>
                         <p>Puedes seguirnos en:</p>
                         <div className="d-flex gap-3 justify-content-center " style={{ fontSize: '20px' }}>
-                            <i class="bi bi-instagram"></i>
-                            <i class="bi bi-github"></i>
+                            <a className="text-decoration-none text-dark" href="https://www.instagram.com/dobleuve_artesania/?hl=es"><i class="bi bi-instagram"></i></a>
+                            <a className="text-decoration-none text-dark" href="https://github.com/diego011294"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
