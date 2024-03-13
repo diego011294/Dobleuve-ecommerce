@@ -49,4 +49,15 @@ Si todo salió bien ejecutamos el programa dandole al play y deberia de salirnos
 <p>Como se puede apreciar en las dependecias se ha utilizado <a href="https://getbootstrap.com/">Bootstrap</a> para darle estilos a la web y conseguir una interface mucho más responsiva en todo tipo de dispositivos y resoluciones.</p>
 
 <h4>SCREENSHOTS: </h4>
+ <h6>HOME:</h6>
+ <img src="img dobleuve/Home.png" alt="Home" />
 
+ <h6>STORE:</h6>
+ <img src="img dobleuve/Store.png" alt="Store" />
+
+ <h6>CARRITO | LOGIN | REGISTRO:</h6>
+ <img src="img dobleuve/Carrito-Login-Registro.png" alt="Carrito, Login, Registro" />
+ 
+<p>Las capturas de pantalla proporcionadas ofrecen una visión visual de las diferentes secciones de la aplicación, destacando su diseño limpio y funcionalidad intuitiva.</p>
+
+<p>En resumen, Dobleuve eCommerce representa un ejemplo destacado de desarrollo de aplicaciones web modernas, combinando tecnologías de vanguardia con un enfoque centrado en el usuario para ofrecer una experiencia de compra en línea sencilla e intuitiva.</p>
